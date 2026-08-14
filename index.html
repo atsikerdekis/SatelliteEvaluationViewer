@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#102b35" />
+    <meta name="description" content="Browse monthly CAMS satellite evaluation figures." />
+    <title>CAMS Satellite Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="CAMS Satellite Evaluation home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><strong>CAMS</strong><small>Satellite Evaluation</small></span>
+      </a>
+      <a class="repository" href="https://github.com/atsikerdekis/SatelliteEvaluationViewer" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Monthly analysis archive</p>
+        <h1 id="page-title">Satellite evaluation figures</h1>
+        <p>Explore model performance across satellite sensors, statistics, and variables.</p>
+      </section>
+
+      <section class="viewer" aria-label="Scientific figure browser">
+        <form class="filters" id="filters">
+          <label>Month<select id="month" name="month"></select></label>
+          <label>Sensor<select id="sensor" name="sensor"></select></label>
+          <label>Statistic<select id="statistic" name="statistic"></select></label>
+          <label>Variable<select id="variable" name="variable"></select></label>
+        </form>
+
+        <div class="figure-heading">
+          <div>
+            <p class="figure-kicker" id="figure-kicker">Selected figure</p>
+            <h2 id="figure-title">Loading figure…</h2>
+          </div>
+          <a id="open-image" class="open-image" href="#" target="_blank" rel="noreferrer" hidden>Open full resolution <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="stage" id="stage" aria-live="polite" aria-busy="true">
+          <div class="loader"><span></span><p>Discovering available figures…</p></div>
+          <img id="figure" alt="" hidden />
+          <div class="empty" id="empty" hidden>
+            <span aria-hidden="true">∿</span>
+            <h3>No figure for this combination</h3>
+            <p>Try a different month, sensor, statistic, or variable.</p>
+          </div>
+        </div>
+
+        <nav class="month-nav" aria-label="Browse months">
+          <button type="button" id="previous"><span aria-hidden="true">←</span><span><small>Previous</small><strong id="previous-label">month</strong></span></button>
+          <p id="position">—</p>
+          <button type="button" id="next"><span><small>Next</small><strong id="next-label">month</strong></span><span aria-hidden="true">→</span></button>
+        </nav>
+      </section>
+    </main>
+
+    <footer><span>Copernicus Atmosphere Monitoring Service</span><span id="figure-count"></span></footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
