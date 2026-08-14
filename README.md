@@ -2,6 +2,8 @@
 
 A responsive, dependency-free browser for the scientific figures in this repository.
 
+Check the website: https://atsikerdekis.github.io/SatelliteEvaluationViewer
+
 ## Add a figure
 
 Add a PNG to the `figures/` folder and keep this naming pattern:
