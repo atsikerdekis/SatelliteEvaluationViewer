@@ -1,4 +1,4 @@
-# CAMS Satellite Evaluation Gallery
+# Satellite Evaluation Viewer
 
 A responsive, dependency-free browser for the scientific figures in this repository.
 
