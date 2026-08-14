@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#102b35" />
-    <meta name="description" content="Browse monthly CAMS satellite evaluation figures." />
-    <title>CAMS Satellite Evaluation</title>
+    <meta name="description" content="Browse monthly satellite evaluation figures." />
+    <title>Satellite Evaluation Viewer</title>
+    <script>try{const theme=localStorage.getItem("gallery-theme");if(theme)document.documentElement.dataset.theme=theme}catch(e){}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -13,12 +14,38 @@
   </head>
   <body>
     <header class="masthead">
-      <a class="brand" href="./" aria-label="CAMS Satellite Evaluation home">
+      <a class="brand" href="./" aria-label="Satellite Evaluation Viewer home">
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span><strong>CAMS</strong><small>Satellite Evaluation</small></span>
+        <strong>Satellite Evaluation Viewer</strong>
       </a>
-      <a class="repository" href="https://github.com/atsikerdekis/SatelliteEvaluationViewer" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch color theme"><span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span></button>
+        <button class="icon-button info-button" id="info-open" type="button" aria-label="Open information" aria-expanded="false" aria-controls="info-panel">i</button>
+        <a class="repository" href="https://github.com/atsikerdekis/SatelliteEvaluationViewer" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+      </div>
     </header>
+
+    <div class="info-backdrop" id="info-backdrop" hidden></div>
+    <aside class="info-panel" id="info-panel" aria-hidden="true" aria-labelledby="info-title">
+      <div class="info-content">
+        <div class="info-heading">
+          <div><p>About this dashboard</p><h2 id="info-title">Satellite Evaluation Viewer</h2></div>
+          <button class="close-button" id="info-close" type="button" aria-label="Close information">×</button>
+        </div>
+        <div class="info-grid">
+          <p>This viewer provides monthly satellite-based evaluation figures for atmospheric model experiments. Use the controls to compare sensors, statistics, and evaluated variables.</p>
+          <div>
+            <h3>Project resources</h3>
+            <ul>
+              <li><a href="#">Latest evaluation report <span aria-hidden="true">↗</span></a></li>
+              <li><a href="#">Project documentation <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://github.com/atsikerdekis/SatelliteEvaluationViewer" target="_blank" rel="noreferrer">Figure repository <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="info-note">Replace the placeholder links and text above with the project reports you would like visitors to use.</p>
+      </div>
+    </aside>
 
     <main>
       <section class="viewer" aria-label="Scientific figure browser">

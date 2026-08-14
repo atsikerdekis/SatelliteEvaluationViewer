@@ -4,7 +4,7 @@ A responsive, dependency-free browser for the scientific figures in this reposit
 
 ## Add a figure
 
-Add a PNG anywhere in the repository and keep this naming pattern:
+Add a PNG to the `figures/` folder and keep this naming pattern:
 
 `SENSOR_vs_..._YYYYMMDD-YYYYMMDD_absolute|relative_VARIABLE_....png`
 

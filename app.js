@@ -22,7 +22,15 @@ function render() {
   els["figure-title"].textContent = `${sensor} · ${selection.variable}`;
   els["figure-kicker"].textContent = `${monthLabel(selection.month)} · ${titleCase(selection.statistic)} statistics`;
   els.figure.hidden = !item; els.empty.hidden = !!item; els["open-image"].hidden = !item;
-  if (item) { els.figure.src = encodeURI(item.file); els.figure.alt = `${sensor} ${selection.variable} ${selection.statistic} evaluation for ${monthLabel(selection.month)}`; els["open-image"].href = encodeURI(item.file); }
+  if (item) {
+    els.figure.src = encodeURI(item.file);
+    els.figure.alt = `${sensor} ${selection.variable} ${selection.statistic} evaluation for ${monthLabel(selection.month)}`;
+    els["open-image"].href = encodeURI(item.file);
+  } else {
+    els.figure.removeAttribute("src");
+    els.figure.alt = "";
+    els["open-image"].removeAttribute("href");
+  }
   els.stage.setAttribute("aria-busy", "false");
   els.previous.disabled = index <= 0; els.next.disabled = index >= months.length - 1;
   els["previous-label"].textContent = index > 0 ? monthLabel(months[index-1]) : "No earlier month";
@@ -58,4 +66,34 @@ async function init() {
 document.getElementById("filters").addEventListener("change", render);
 els.previous.addEventListener("click", () => stepMonth(-1)); els.next.addEventListener("click", () => stepMonth(1));
 document.addEventListener("keydown", event => { if (event.target.tagName !== "SELECT" && event.key === "ArrowLeft") stepMonth(-1); if (event.target.tagName !== "SELECT" && event.key === "ArrowRight") stepMonth(1); });
+
+const themeToggle = document.getElementById("theme-toggle");
+function updateThemeLabel() {
+  const dark = document.documentElement.dataset.theme === "dark";
+  themeToggle.setAttribute("aria-label", `Switch to ${dark ? "light" : "dark"} mode`);
+}
+themeToggle.addEventListener("click", () => {
+  const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = theme;
+  try { localStorage.setItem("gallery-theme", theme); } catch (error) {}
+  updateThemeLabel();
+});
+updateThemeLabel();
+
+const infoPanel = document.getElementById("info-panel");
+const infoOpen = document.getElementById("info-open");
+const infoClose = document.getElementById("info-close");
+const infoBackdrop = document.getElementById("info-backdrop");
+function setInfoPanel(open) {
+  infoPanel.classList.toggle("open", open);
+  infoPanel.setAttribute("aria-hidden", String(!open));
+  infoOpen.setAttribute("aria-expanded", String(open));
+  infoBackdrop.hidden = !open;
+  document.body.style.overflow = open ? "hidden" : "";
+  if (open) infoClose.focus(); else infoOpen.focus();
+}
+infoOpen.addEventListener("click", () => setInfoPanel(true));
+infoClose.addEventListener("click", () => setInfoPanel(false));
+infoBackdrop.addEventListener("click", () => setInfoPanel(false));
+document.addEventListener("keydown", event => { if (event.key === "Escape" && infoPanel.classList.contains("open")) setInfoPanel(false); });
 init();
