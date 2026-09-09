@@ -1,0 +1,155 @@
+[
+  {
+    "file": "figures/MOD_vs_0001_vs_control_20260301-20260331_absolute_AOD550_AODfilter0.png",
+    "sensor": "MOD",
+    "start": "20260301",
+    "end": "20260331",
+    "statistic": "absolute",
+    "variable": "AOD550",
+    "month": "202603"
+  },
+  {
+    "file": "figures/MOD_vs_0001_vs_control_20260301-20260331_relative_AOD550_AODfilter0.png",
+    "sensor": "MOD",
+    "start": "20260301",
+    "end": "20260331",
+    "statistic": "relative",
+    "variable": "AOD550",
+    "month": "202603"
+  },
+  {
+    "file": "figures/MOD_MYD_VIIRS_SNPP_vs_0001_vs_control_20260301-20260331_absolute_AOD550_AODfilter0.png",
+    "sensor": "MOD_MYD_VIIRS_SNPP",
+    "start": "20260301",
+    "end": "20260331",
+    "statistic": "absolute",
+    "variable": "AOD550",
+    "month": "202603"
+  },
+  {
+    "file": "figures/MOD_MYD_VIIRS_SNPP_vs_0001_vs_control_20260301-20260331_relative_AOD550_AODfilter0.png",
+    "sensor": "MOD_MYD_VIIRS_SNPP",
+    "start": "20260301",
+    "end": "20260331",
+    "statistic": "relative",
+    "variable": "AOD550",
+    "month": "202603"
+  },
+  {
+    "file": "figures/MYD_vs_0001_vs_control_20260301-20260331_absolute_AOD550_AODfilter0.png",
+    "sensor": "MYD",
+    "start": "20260301",
+    "end": "20260331",
+    "statistic": "absolute",
+    "variable": "AOD550",
+    "month": "202603"
+  },
+  {
+    "file": "figures/MYD_vs_0001_vs_control_20260301-20260331_relative_AOD550_AODfilter0.png",
+    "sensor": "MYD",
+    "start": "20260301",
+    "end": "20260331",
+    "statistic": "relative",
+    "variable": "AOD550",
+    "month": "202603"
+  },
+  {
+    "file": "figures/SPEXone_vs_0001_vs_control_20260301-20260331_absolute_AOD550_AODfilter0.png",
+    "sensor": "SPEXone",
+    "start": "20260301",
+    "end": "20260331",
+    "statistic": "absolute",
+    "variable": "AOD550",
+    "month": "202603"
+  },
+  {
+    "file": "figures/VIIRS_SNPP_vs_0001_vs_control_20260301-20260331_absolute_AOD550_AODfilter0.png",
+    "sensor": "VIIRS_SNPP",
+    "start": "20260301",
+    "end": "20260331",
+    "statistic": "absolute",
+    "variable": "AOD550",
+    "month": "202603"
+  },
+  {
+    "file": "figures/VIIRS_SNPP_vs_0001_vs_control_20260301-20260331_relative_AOD550_AODfilter0.png",
+    "sensor": "VIIRS_SNPP",
+    "start": "20260301",
+    "end": "20260331",
+    "statistic": "relative",
+    "variable": "AOD550",
+    "month": "202603"
+  },
+  {
+    "file": "figures/MOD_vs_0001_vs_control_20260401-20260430_absolute_AOD550_AODfilter0.png",
+    "sensor": "MOD",
+    "start": "20260401",
+    "end": "20260430",
+    "statistic": "absolute",
+    "variable": "AOD550",
+    "month": "202604"
+  },
+  {
+    "file": "figures/MOD_vs_0001_vs_control_20260401-20260430_relative_AOD550_AODfilter0.png",
+    "sensor": "MOD",
+    "start": "20260401",
+    "end": "20260430",
+    "statistic": "relative",
+    "variable": "AOD550",
+    "month": "202604"
+  },
+  {
+    "file": "figures/MOD_MYD_VIIRS_SNPP_vs_0001_vs_control_20260401-20260430_absolute_AOD550_AODfilter0.png",
+    "sensor": "MOD_MYD_VIIRS_SNPP",
+    "start": "20260401",
+    "end": "20260430",
+    "statistic": "absolute",
+    "variable": "AOD550",
+    "month": "202604"
+  },
+  {
+    "file": "figures/MOD_MYD_VIIRS_SNPP_vs_0001_vs_control_20260401-20260430_relative_AOD550_AODfilter0.png",
+    "sensor": "MOD_MYD_VIIRS_SNPP",
+    "start": "20260401",
+    "end": "20260430",
+    "statistic": "relative",
+    "variable": "AOD550",
+    "month": "202604"
+  },
+  {
+    "file": "figures/MYD_vs_0001_vs_control_20260401-20260430_absolute_AOD550_AODfilter0.png",
+    "sensor": "MYD",
+    "start": "20260401",
+    "end": "20260430",
+    "statistic": "absolute",
+    "variable": "AOD550",
+    "month": "202604"
+  },
+  {
+    "file": "figures/MYD_vs_0001_vs_control_20260401-20260430_relative_AOD550_AODfilter0.png",
+    "sensor": "MYD",
+    "start": "20260401",
+    "end": "20260430",
+    "statistic": "relative",
+    "variable": "AOD550",
+    "month": "202604"
+  },
+  {
+    "file": "figures/VIIRS_SNPP_vs_0001_vs_control_20260401-20260430_absolute_AOD550_AODfilter0.png",
+    "sensor": "VIIRS_SNPP",
+    "start": "20260401",
+    "end": "20260430",
+    "statistic": "absolute",
+    "variable": "AOD550",
+    "month": "202604"
+  },
+  {
+    "file": "figures/VIIRS_SNPP_vs_0001_vs_control_20260401-20260430_relative_AOD550_AODfilter0.png",
+    "sensor": "VIIRS_SNPP",
+    "start": "20260401",
+    "end": "20260430",
+    "statistic": "relative",
+    "variable": "AOD550",
+    "month": "202604"
+  }
+]
