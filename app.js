@@ -11,7 +11,7 @@ const sensorNames = {
 const sensors = ["MOD","MYD","VIIRS_SNPP","MOD_MYD_VIIRS_SNPP","SPEXone"];
 const statistics = ["absolute","relative"];
 const variables = ["AOD550"];
-const figureBase = "https://surfdrive.surf.nl/s/b6MQcZaAEjkeqsj/download?path=%2F&files=";
+const figureBase = "https://surfdrive.surf.nl/s/rN2HLG7zJi3cqCM/download?path=%2F&files=";
 const startMonth = "201812";
 
 const monthFormat = new Intl.DateTimeFormat("en", { month:"long", year:"numeric", timeZone:"UTC" });
