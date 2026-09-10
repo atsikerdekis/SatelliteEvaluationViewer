@@ -1,4 +1,4 @@
-ame: Deploy gallery to GitHub Pages
+name: Deploy gallery to GitHub Pages
 
 on:
   push:
