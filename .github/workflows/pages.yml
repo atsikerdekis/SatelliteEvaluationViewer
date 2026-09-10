@@ -1,4 +1,4 @@
-name: Deploy gallery to GitHub Pages
+ame: Deploy gallery to GitHub Pages
 
 on:
   push:
@@ -27,9 +27,6 @@ jobs:
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-
-      - name: Discover available figures
-        run: node scripts/generate-figures.mjs
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
